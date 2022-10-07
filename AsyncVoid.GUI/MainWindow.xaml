@@ -1,0 +1,24 @@
+﻿<Window x:Class="AsyncVoid.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncVoid.GUI"
+        mc:Ignorable="d"
+        Title="Async Void" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="10*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Content="Title:"></Label>
+        <TextBox Name="Title" Grid.Column="1" Margin="5,0,5,0" Text="{Binding Title}"></TextBox>
+        <Button Name="Save" Grid.Column="2" Content="Save" Click="Save_Click"></Button>
+        <Label Name="Message" Grid.Row="1" Grid.Column="1"></Label>
+    </Grid>
+</Window>
